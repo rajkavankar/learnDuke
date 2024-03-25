@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-between;
     background: #fff;
-    padding: 15px 7%;
+    padding: 15px 7px;
 }
 .logo{
     width: 80px;
@@ -14,13 +14,21 @@ h1{
     font-size: 20px;
     font-weight: 600;
 }
+.logo_title{
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
 .search-box{
     display:flex;
+    width: 35%;
     align-items: center;
     background: #e7eef9;
-    padding: 6px 70px;
-    border-radius: 50px;
-    margin-left: 25px;
+    padding: 5px 10px;
+    border-radius: 60px;
+    margin-left: 2.25rem;
+    /* width: fit-content; */
 }
 .search-box input{
     padding: 6px;
@@ -28,8 +36,8 @@ h1{
     border: 0;
     outline: 0;
     color: #242424;
-    font-size: 18px;
-    font-size: 18px;
+    font-size: 16px;
+    /* font-size: 18px; */
     max-width: 200px;
 }
 
