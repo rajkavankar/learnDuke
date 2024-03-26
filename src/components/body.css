@@ -182,3 +182,22 @@ h4 {
   margin-top: 10px;
   font-weight: 500;
 }
+
+@media only screen and (max-width: 600px) {
+
+    .right_side{
+        width: auto;
+    }
+    .join_us{
+     margin-left: 2.25rem;
+    margin-top: 9rem;
+    width: 9.4rem;
+    }
+    .Learn_more{
+        width: 9.4rem;
+    }
+    .boxy {
+      display: flex;
+      flex-direction: column;
+    }
+  }

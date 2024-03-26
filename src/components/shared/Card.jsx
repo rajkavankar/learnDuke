@@ -11,6 +11,9 @@ const Card = ({ children}) => {
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
         columnGap:"30px",
+        '@media (max-width: 768px)': { // Example media query for max-width 768px
+          display:"block", // Change grid layout for smaller screens
+      }
     }}>{
         children}</div>
   )
