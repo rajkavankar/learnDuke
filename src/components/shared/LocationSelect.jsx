@@ -25,7 +25,7 @@ const LocationSelect = () => {
         onChange={(e) => setLocation(e.target.value)}
         aria-label='Default select example'
         className='inner-boxy'>
-        <option value='value' className='bg-light'>
+        <option value='World' className='bg-light'>
           Select location
         </option>
         {locations.map((item) => (

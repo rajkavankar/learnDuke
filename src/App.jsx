@@ -2,11 +2,11 @@ import "./App.css"
 import Navbar from "./components/navbar"
 import Body from "./components/body"
 import Footer from "./components/footer"
-import { LocationProvider } from "./Context/LocationContext"
+import Provider from "./Context/Provider"
 function App() {
   return (
     <>
-      <LocationProvider>
+      <Provider>
         <Navbar />
         {/* <div className="wrapper"> */}
 
@@ -14,7 +14,7 @@ function App() {
 
         {/* </div> */}
         <Footer />
-      </LocationProvider>
+      </Provider>
     </>
   )
 }

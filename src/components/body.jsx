@@ -4,19 +4,24 @@ import React from "react"
 import Card from "./shared/Card"
 import { Row, Col, Container } from "react-bootstrap"
 import useLocation from "../Context/LocationContext"
+import useSubjects from "../Context/SubjectsContext"
 import "./body.css"
 import person from "../assets/person.jpg"
 import LocationSelect from "./shared/LocationSelect"
 import { CiLocationOn } from "react-icons/ci"
 import { PiStudentLight } from "react-icons/pi"
+import SubjectsSelect from "./shared/SubjectsSelect"
 
 function Body() {
   const { location } = useLocation()
+  const { subject } = useSubjects()
   return (
     <>
       <div className=''>
         <div className='box'>
-          <h1 className=''>The Best Physics Tutors for CBSE in {location}</h1>
+          <h1 className=''>
+            The Best {subject} Tutors for CBSE in {location}
+          </h1>
           <button className='join_us'>Join Us</button>
           <button className='Learn_more'> learn more</button>
         </div>
@@ -26,20 +31,10 @@ function Body() {
             <Col>
               <LocationSelect />
             </Col>
-            {/* <input
-            type='text'
-            placeholder='location'
-            className='boxy_L'
-            autoComplete='off'
-          /> */}
             <Col>
-              <input
-                type='text'
-                placeholder='subject'
-                className='boxy_s'
-                autoComplete='off'
-              />
+              <SubjectsSelect />
             </Col>
+
             <Col>
               <input
                 type='text'
