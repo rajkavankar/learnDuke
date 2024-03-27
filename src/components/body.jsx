@@ -8,19 +8,21 @@ import useSubjects from "../Context/SubjectsContext"
 import "./body.css"
 import person from "../assets/person.jpg"
 import LocationSelect from "./shared/LocationSelect"
-import { CiLocationOn } from "react-icons/ci"
-import { PiStudentLight } from "react-icons/pi"
 import SubjectsSelect from "./shared/SubjectsSelect"
+import ExamsSelect from "./shared/ExamsSelect"
+import CurriculamSelect from "./shared/CurriculamSelect"
+import useCurriculam from "../Context/CurriculiamContext"
 
 function Body() {
   const { location } = useLocation()
   const { subject } = useSubjects()
+  const { curriculam } = useCurriculam()
   return (
     <>
       <div className=''>
         <div className='box'>
           <h1 className=''>
-            The Best {subject} Tutors for CBSE in {location}
+            The Best {subject} Tutors for {curriculam} in {location}
           </h1>
           <button className='join_us'>Join Us</button>
           <button className='Learn_more'> learn more</button>
@@ -36,20 +38,10 @@ function Body() {
             </Col>
 
             <Col>
-              <input
-                type='text'
-                placeholder='exams'
-                className='boxy_e'
-                autoComplete='off'
-              />
+              <ExamsSelect />
             </Col>
             <Col>
-              <input
-                type='text'
-                placeholder='curriculum'
-                className='boxy_c'
-                autoComplete='off'
-              />
+              <CurriculamSelect />
             </Col>
           </Row>
         </Container>
