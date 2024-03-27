@@ -1,6 +1,5 @@
 import React from "react"
-import { Form, InputGroup } from "react-bootstrap"
-import { FaMapMarkerAlt } from "react-icons/fa"
+import { Form } from "react-bootstrap"
 import useLocation from "../../Context/LocationContext"
 
 const LocationSelect = () => {
