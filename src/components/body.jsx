@@ -2,16 +2,18 @@ import React from "react"
 // import { CCard, CRow, CCol, CCardBody, CCardImage, CCardTitle,CCardText} from '@coreui/react'
 // import duke from "../assets/LearndukeLogo.png"
 import Card from "./shared/Card"
-import { Row, Col, Container } from "react-bootstrap"
+import { Row, Col, Container, Badge } from "react-bootstrap"
 import useLocation from "../Context/LocationContext"
 import useSubjects from "../Context/SubjectsContext"
 import "./body.css"
+import { LuCheckCircle } from "react-icons/lu"
 import person from "../assets/person.jpg"
 import LocationSelect from "./shared/LocationSelect"
 import SubjectsSelect from "./shared/SubjectsSelect"
 import ExamsSelect from "./shared/ExamsSelect"
 import CurriculamSelect from "./shared/CurriculamSelect"
 import useCurriculam from "../Context/CurriculiamContext"
+import RatingComponent from "./RatingComponent"
 
 function Body() {
   const { location } = useLocation()
@@ -20,7 +22,7 @@ function Body() {
   return (
     <>
       <div className=''>
-        <div className='box'>
+        <div className='box k'>
           <h1 className=''>
             The Best {subject} Tutors for {curriculam} in {location}
           </h1>
@@ -28,7 +30,7 @@ function Body() {
           <button className='Learn_more'> learn more</button>
         </div>
         <Container>
-          <Row className=' boxy'>
+          <Row className=' boxy space-y-2 lg:space-y-0'>
             {/* <CiLocationOn /> */}
             <Col>
               <LocationSelect />
@@ -51,7 +53,16 @@ function Body() {
               <img className='person' src={person} alt='' />
             </div>
             <div className='right_side'>
-              <h2 className='person_name'>Shiv-Maths</h2>
+              <div>
+                <div className='flex justify-between items-center'>
+                  <h2 className='person_name'>Shiv-Maths</h2>
+                  <RatingComponent value={2.8} />
+                </div>
+                <div className='flex justify-start items-center gap-2 text-green-700 font-semibold'>
+                  <LuCheckCircle className='font-bold' />
+                  Verified
+                </div>
+              </div>
               <h3 className='person_title'>
                 Passionate and seasoned teacher with 5 years of experience
               </h3>
@@ -69,6 +80,7 @@ function Body() {
               <h3 className='person_teaches'>Teaches: </h3>
               <h3 className='person_curri'>Curriculum:</h3>
               <h3 className='person_exam'>Exam:</h3>
+              <h3 className='person_exam'>Price:</h3>
               <div className='btn'>
                 <button className='teachers_btn'>contact us</button>
                 <button className='teachers_btnn'>session</button>
